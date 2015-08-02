@@ -1,0 +1,45 @@
+Contents
+--------
+
+Here is a guide to which bit of source code does what.
+
+2of5.c:
+	Matrix 2 of 5
+	Industrial 2 of 5
+	IATA 2 of 5
+	Data Logic
+	Interleaved 2 of 5
+	ITF-14
+	Deutche Post Leitcode
+	Deutche Post Identcode
+
+code128.c:
+	Code 128
+	Code 128 Subset B
+	NVE-18
+	GS1-128 (UCC/EAN-128)
+	EAN-14
+
+code.c:
+	Code 11
+	Code 39
+	Pharmazentral Nummer (PZN)
+	Extended Code 39 (Code 39+)
+	Code 93
+	LOGMARS
+	Channel Code
+
+qr.c:
+	QR Code
+	Micro QR Code
+
+upcean.c:
+	UPC-A
+	UPC-E
+	EAN-2 add-on
+	EAN-5 add-on
+	EAN-8
+	EAN-13
+	SBN (verification)
+	ISBN (verification)
+	ISBN-13 (verification)
