@@ -1,6 +1,6 @@
 Name:      zint
 Version:   2.4.3
-Release:   10
+Release:   11
 Summary:   Barcode generator library
 License:   BSD-2.0
 URL:       http://www.zint.org.uk
@@ -40,10 +40,16 @@ http://www.zint.org.uk/zintSite/Manual.aspx
 %prep
 %setup -q
 
-
 %build
 MAJORVER=`echo %{version} | awk 'BEGIN {FS="."}{print $1}'`
-cmake . -DCMAKE_INSTALL_PREFIX=/usr -DFULLVER=%{version} -DMAJORVER=${MAJORVER}
+
+%ifarch aarch64 x86_64
+ARCH=aarch64
+%else
+ARCH=arm
+%endif
+
+cmake . -DCMAKE_INSTALL_PREFIX=/usr -DFULLVER=%{version} -DMAJORVER=${MAJORVER} -DARCH=${ARCH}
 make VERBOSE=1
 
 

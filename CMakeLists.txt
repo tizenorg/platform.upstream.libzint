@@ -8,6 +8,13 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 #comment or remove the above line before release
 
+if ("${ARCH}" MATCHES "aarch64")
+MESSAGE(${ARCH})
+set(LIB_SUFFIX "64")
+else ("${ARCH}" MATCHES "aarch64")
+MESSAGE(${ARCH})
+endif ("${ARCH}" MATCHES "aarch64")
+
 add_definitions (-DZINT_VERSION=\"${ZINT_VERSION}\" -Wno-unused-variable -Wall )
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" )
